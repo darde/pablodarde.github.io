@@ -302,13 +302,21 @@ figure img  {
     justify-content: space-around;
   }
 
+  .social ul li {
+    margin-right: 10px;
+  }
+
+  .social ul li:last-child {
+    margin: 0;
+  }
+
   .social ul li a span {
     display: none;
   }
 
   .column {
     left: 0;
-    padding: 20px;
+    padding: 20px 0;
   }
 
   .main {
@@ -327,6 +335,14 @@ figure img  {
   figure img {
     display: block;
     margin: 0 auto;
+  }
+
+  .main.projects figure {
+    width: 95%;
+  }
+
+  .main.projects figure img {
+    width: 100%;
   }
 
   .profile img {
