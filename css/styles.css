@@ -113,6 +113,11 @@ ul li {
   list-style-type: none;
 }
 
+.content-aligned {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .menu ul li {
   width: 25%;
   text-align: center;
@@ -318,6 +323,13 @@ figure img  {
   figure img {
     display: block;
     margin: 0 auto;
-    border-radius: 50%;
+  }
+
+  .profile img {
+    border-radius: 50%;  }
+
+  .content-aligned {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
