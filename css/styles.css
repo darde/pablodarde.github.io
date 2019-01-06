@@ -49,6 +49,10 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.main h1 {
+  font-size: 28px;
+}
+
 .main.projects h2 {
   border-bottom: 1px dotted #fff;
 }
