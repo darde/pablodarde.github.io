@@ -4,33 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Food Court</title>
   <style>
     body, html {
-      padding: 0;
+      margin: 0;
+      height: 100%;
+      overflow: auto;
     }
 
     .wrapper {
-      width: 960px;
+      width: 100%;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       flex-flow: column;
       justify-content: flex-start;
       align-items: center;
       background: #900;
+      height: 100%;
       color: #fff;
       font: normal 14px Arial;
+    }
+
+    header {
+      margin-bottom: 50px;
+      width: 100%;
+      min-height: 80px;
+      background: #700;
+    }
+
+    header h1 {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    h2 {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      list-style-position: inside;
+      width: 90%;
+    }
+
+    ul li {
+      margin-bottom: 20px;
+    }
+
+    ul li > button {
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <h1>Restaurante Caseirinho</h1>
-    <h2>Cardápio</h2>
+    <header>
+      <h1>Floripa Shopping</h1>
+    </header>
+    <h2>Selecione um restaurante</h2>
     <ul>
-      <li>Pizza Grande: R$42,00</li>
-      <li>Sanduíche: R$12,00</li>
-      <li>Frango Assado com Polenta: R$40,00</li>
+      <li><button type="button" class="btn btn-warning">Mc Donalds</button></li>
+      <li><button type="button" class="btn btn-warning">Burguer King</button></li>
+      <li><button type="button" class="btn btn-warning">Restaurante Samuara</button></li>
+      <li><button type="button" class="btn btn-warning">Montana Grill</button></li>
     </ul>
   </div>
 </body>
