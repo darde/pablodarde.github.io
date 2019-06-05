@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pablo Rodrigo Darde</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|Dosis" rel="stylesheet">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    window.onload = function () {
+      var btnMenu = document.querySelector('button.hamburger');
+      var menuFrame = document.querySelector('.menu-frame');
+
+      function toggleHamburgerMenu(e) {
+        var elem = document.querySelector('button.hamburger');
+        if (elem.classList.contains('is-active')) {
+          elem.classList.remove('is-active');
+          menuFrame.classList.remove('active');
+        } else {
+          console.log('class: ', elem.classList.contains('is-active'));
+          elem.classList.add('is-active');
+          menuFrame.classList.add('active');
+        }
+      };
+
+      btnMenu.addEventListener('click', toggleHamburgerMenu);
+
+    };
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="column">
+      <header>
+        <hgroup>
+          <h1>Pablo Darde</h1>
+          <h2>[ Software Engineer ]</h2>
+        </hgroup>
+      </header>
+      <div class="menu-frame">
+        <div class="button-container">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html"><span>About</span></a></li>
+            <li><a href="articles.html"><span>Articles</span></a></li>
+            <li class='active'><a href="projects.html"><span>Projects</span></a></li>
+            <li><a href="resume.html"><span>Resume</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="main projects">
+        <h1>Form</h1>
+        <p>Check out my repositories on <a href="https://github.com/darde">Github.</a></p>
+        <h2>#1 - React Native Sidemenu</h2>
+        <div class="content-aligned">
+          <p>
+            This project is a boilerplate for React Native Apps with Sidemenu.<br />
+            <a href="https://github.com/darde/react-native-sidemenu">React Native Sidemenu</a>
+          </p>
+          <figure>
+            <img src="./img/react-native-sidemenu.gif" alt="React Native Sidemenu">
+          </figure>
+        </div>
+        <h2>#2 - Mario Watch Face - Android Wear 2.0</h2>
+        <div class="content-aligned">
+          <p>
+            This is a simple android watch face with a step counter. The little white flag matches the current step
+            count value.<br>
+            This project is in progress.
+          </p>
+          <figure>
+            <img src="./img/android_wear.gif" alt="Mario Watch Face">
+          </figure>
+        </div>
+        <h2>#3 - Bookstore - Google Books API</h2>
+        <div class="content-aligned">
+          <div>
+            <p>
+              This was a two weeks challenge work. This work was part of the selection process for my current job.
+            </p>
+            <p>This is built with ReactJS, Redux and Redux Saga to handle asynchronous calls.</p>
+            <p>
+              <a href="https://github.com/darde/RD-Book-Store">Bookstore on Github</a>
+            </p>
+            <p>
+              <a href="https://rd-book-store.herokuapp.com/">Bookstore on Heroku</a>
+            </p>
+          </div>
+          <figure class="max-wdith-70">
+            <img src="./img/bookstore.gif" alt="Bookstore with Google Books API">
+          </figure>
+        </div>
+      </section>
+      <nav class="social">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/pablodarde/">
+              <img src="./img/icon_linkedin.png" alt="Visit my LinkedIn Profile">
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/darde">
+              <img src="./img/icon_github.png" alt="Visit my Github">
+              <span>Github</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/1703696/pablo-darde">
+              <img src="./img/icon_stackoverflow.png" alt="Visit my profile on Stackoverflow">
+              <span>StackOverflow</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@pablodarde">
+              <img src="./img/icon_medium.png" alt="Check out my stories on Medium">
+              <span>Medium</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:pablodarde@gmail.com">
+              <img src="./img/icon_gmail.png" alt="Send me an e-mail">
+              <span>Gmail</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.quora.com/profile/Pablo-Rodrigo-Darde">
+              <img src="./img/icon_quora.png" alt="Check out my questions on Quora">
+              <span>Quora</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2583217A5">
+              <img src="./img/icon_lattes.png" alt="Visite meu currículo Lattes">
+              <span>Lattes</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</body>
+
+</html>
