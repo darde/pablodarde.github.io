@@ -2,7 +2,7 @@
   "name": "Radio Felicidade FM",
   "short_name": "Felicidade",
   "lang": "pt-BR",
-  "start_url": "/radio-pwa/index.html",
+  "start_url": "https://darde.github.io/radio-pwa/",
   "display": "fullscreen",
   "theme_color": "#c2f442",
   "icons": [
