@@ -1,0 +1,22 @@
+{
+  "name": "Radio Felicidade FM",
+  "short_name": "Felicidade",
+  "lang": "pt-BR",
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#c2f442",
+  "icons": [
+    {
+      "src": "img/antenna64x64.png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "img/antenna128x128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "img/antenna512x512.png",
+      "sizes": "512x512"
+    }
+  ]
+}
