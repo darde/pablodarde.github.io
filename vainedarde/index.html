@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Lateef&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    html, body {
+      padding: 0;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section + section {
+      margin-top: 60px;
+    }
+
+    p, h1 {
+      font: normal 24px 'Bad Script', cursive;
+      line-height: 30%;
+    }
+
+    h1 {
+      font: 600 26px 'Bad Script', cursive;
+      text-align: center;
+    }
+
+    .signature {
+      font: normal 18px 'Bad Script', cursive;
+      text-align: right;
+      margin-top: 40px;
+    }
+    .poema {
+      position: absolute;
+      top: 10px;
+      opacity: 1;
+      animation: poema 8s 1;
+    }
+
+    .matrix {
+      position: absolute;
+      top: 10px;
+      opacity: 0;
+      animation: matrix 8s 1;
+    }
+
+    @keyframes poema {
+      0% { opacity: 0; }
+      30% { opacity: 0; }
+      31% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes matrix {
+      0% { opacity: 1; }
+      30% { opacity: 1; }
+      31% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    
+  </style>
+  <script>
+    window.onload = function() {
+      // Get the canvas node and the drawing context
+      const canvas = document.getElementById('canv');
+      const ctx = canvas.getContext('2d');
+
+      // set the width and height of the canvas
+      const w = canvas.width = 240;
+      const h = canvas.height = 600;
+
+      // draw a black rectangle of width and height same as that of the canvas
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, w, h);
+
+      const cols = Math.floor(w / 20) + 1;
+      const ypos = Array(cols).fill(0);
+
+      function matrix() {
+        // Draw a semitransparent black rectangle on top of previous drawing
+        ctx.fillStyle = '#fff1';
+        ctx.fillRect(0, 0, w, h);
+
+        // Set color to green and font to 15pt monospace in the drawing context
+        ctx.fillStyle = '#000';
+        ctx.font = '15pt monospace';
+
+        // for each column put a random character at the end
+        ypos.forEach((y, ind) => {
+          // generate a random character
+          // const text = String.fromCharCode(Math.random() * 128);
+          const text = Math.round(Math.random())
+
+          // x coordinate of the column, y coordinate is already given
+          const x = ind * 20;
+          // render the character at (x, y)
+          ctx.fillText(text, x, y);
+
+          // randomly reset the end of the column if it's at least 100px high
+          if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+          // otherwise just move the y coordinate for the column 20px down,
+          else ypos[ind] = y + 20;
+        });
+      }
+
+      // render the animation at 20 FPS.
+      setInterval(matrix, 50);
+    }
+  </script>
+  <title>Poema</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="matrix">
+      <canvas width="300" height="600" id="canv" />
+    </div>
+    <div class="poema">
+      <h1>Digital</h1>
+      <section>
+        <p>Devido às circunstâncias</p>
+        <p>e às suas consequências:</p>
+        <p>tantas crises de distâncias</p>
+        <p>com sintomas de ausências</p>
+      </section>
+      <section>
+        <p>Sofrido de tantas ânsias</p>
+        <p>por falta de convivências:</p>
+        <p>perdi toda a tolerância</p>
+        <p>de ser minha residência</p>
+      </section>
+      <section>
+        <p>Por necessidade extrema,</p>
+        <p>Fiz das células, fonemas:</p>
+        <p>fiquei consoante e vogal.</p>
+      </section>
+      <section>
+        <p>Alterei o meu sistema</p>
+        <p>e me imprimi num poema</p>
+        <p>pra me tornar digital</p>
+      </section>
+      <div class="signature">Vaine Darde</div>
+    </div>
+  </div>
+</body>
+</html>
